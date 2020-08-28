@@ -1,0 +1,18 @@
+{
+    "undef": true,
+    "unused": true,
+    "esversion": 6,
+    "globals": {
+        "$": false,
+        "location": false,
+        "angularApp": false,
+        "statisticsInterval": false,
+        "sessionStorage": false,
+        "urlInit": false,
+        "reportUrl": false,
+        "datepicker": false,
+        "convertTableToPdf": false,
+        "convertTableToXls": false
+    },
+    "browser": true
+}
