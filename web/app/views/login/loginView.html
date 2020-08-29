@@ -1,31 +1,48 @@
 ﻿<div class="container">
-  <form>
+  <form name="loginForm" novalidate>
     <div>
       <label for="email">Correo</label>
       <input
         type="email"
         placeholder="Ingresa tu correo"
-        name="emial"
-        required
+        name="email"
+        ng-model="user.email"
+        ng-required="true"
       />
+      <div
+        ng-show="loginForm.email.$touched && loginForm.email.$invalid"
+        style="padding-bottom: 10px"
+      >
+        <span class="error-message"> Ingresa un correo valido. </span>
+      </div>
 
       <label for="psw">Contraseña</label>
       <input
         type="password"
         placeholder="Ingresa tu contraseña"
         name="psw"
-        required
+        ng-model="user.password"
+        ng-required="true"
       />
+      <div
+        ng-show="loginForm.psw.$touched && loginForm.psw.$invalid"
+        style="padding-bottom: 10px"
+      >
+        <span class="error-message"> La contraseña es requerida. </span>
+      </div>
 
-      <button type="submit">Login</button>
+      <button
+        type="submit"
+        class="login-button"
+        ng-disabled="loginForm.$invalid"
+        ng-click="onLogin()"
+      >
+        Iniciar sesión
+      </button>
       <label>
-        <input type="checkbox" checked="checked" name="remember" /> Recordarme
+        <input type="checkbox" name="remember" ng-model="user.stayConnected" />
+        Mantenerse conectado
       </label>
-    </div>
-
-    <div>
-      <button type="button">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
