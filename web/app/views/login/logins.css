@@ -14,11 +14,16 @@ input[type="text"] {
 	border: 1px solid lightslategray;
 	border-radius: 20px;
 	box-sizing: border-box;
+	font-family: Montserrat, Helvetica;
 }
 
 input:focus {
 	outline: none !important;
 	border: 1px solid var(--blue);
+}
+
+select:focus {
+	outline: none !important;
 }
 
 input.ng-invalid.ng-touched {
