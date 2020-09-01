@@ -1,0 +1,48 @@
+form {
+	border: 3px solid #f1f1f1;
+	margin: 30px;
+	padding: 30px;
+}
+
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid lightslategray;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+input:focus {
+	outline: none !important;
+	border: 1px solid var(--blue);
+}
+
+input.ng-invalid.ng-touched {
+	border: 1px solid var(--red);
+}
+
+.login-button-form {
+	width: 100%;
+	padding: 10px 0;
+	color: white;
+	background: var(--green);
+	border-radius: 20px;
+	border: 0;
+	margin-bottom: 10px;
+}
+
+button[disabled="disabled"] {
+	opacity: 0.5;
+	cursor: not-allowed !important;
+}
+
+button:focus {
+	outline: none !important;
+}
+
+.error-message {
+	color: var(--red);
+}

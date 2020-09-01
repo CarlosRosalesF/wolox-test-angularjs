@@ -1,0 +1,122 @@
+.mh-log {
+	max-width: 100%;
+	height: auto;
+	min-width: 150px;
+}
+
+#start {
+	background-image: url("../../../assets/img/Backgrounds/Bg_Header.png");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.main-nav li {
+	display: inline;
+	font-weight: bold;
+}
+.main-nav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+	text-decoration: none;
+	color: black;
+}
+
+.row {
+	display: flex;
+	margin-top: 30px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.login-button {
+	padding: 5px 50px;
+	color: var(--blue);
+	background: white;
+	border-radius: 20px;
+	border: 1px var(--blue) solid;
+	margin-bottom: 10px;
+}
+
+.follow-button {
+	padding: 10px 55px;
+	color: var(--blue);
+	background: transparent;
+	border-radius: 20px;
+	border: 2px var(--blue) solid;
+	margin-bottom: 10px;
+}
+
+#welcome img {
+	transform: scaleX(-1);
+	width: 80%;
+	min-width: 250px;
+	float: right;
+}
+
+#tecnologies img {
+	width: 100%;
+	min-width: 250px;
+}
+
+#follow {
+	display: flex;
+	margin: 40px 0 40px 0;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+#follow-img {
+	flex: 60%;
+	background-image: url("../../../assets/img/img_woloxer.png");
+	height: 35vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px;
+}
+
+#follow-text {
+	display: flex;
+	flex: 40%;
+	background: var(--grey);
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+}
+
+#start {
+	background-image: url("../../../assets/img/Backgrounds/Bg_Footer.png");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+	.row {
+		flex-direction: column;
+		height: auto;
+		text-align: center;
+	}
+
+	#follow {
+		flex-direction: column;
+	}
+}

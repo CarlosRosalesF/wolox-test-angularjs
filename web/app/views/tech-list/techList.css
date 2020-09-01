@@ -1,0 +1,49 @@
+.tech-card {
+	display: flex;
+	align-items: stretch;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	margin: 20px 0 0 0;
+	padding: 15px;
+	height: 20vh;
+}
+
+.tech-card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+	flex: 30%;
+}
+
+.image-container > img {
+	height: 100%;
+	width: 100%;
+	object-fit: scale-down;
+}
+.card-text {
+	flex: 70%;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-around;
+}
+.card-text > div {
+	flex: 50%;
+}
+
+.card-text > div > h2 {
+	font-size: clamp(1em, 4vw, 1.3em);
+	margin: 1vw 0 1vw 0;
+}
+
+@media screen and (max-width: 900px) {
+	.tech-card {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.image-container {
+		height: 20vh;
+	}
+}
