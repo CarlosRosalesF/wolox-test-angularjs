@@ -1,13 +1,53 @@
-﻿.container {
-  padding: 5vh 20vh;
+﻿@import "colors.css";
+@import "fonts.css";
+/* COMPONENTS */
+@import "../../app/views/login/logins.css";
+@import "../../app/views/landing/landing.css";
+@import "../../app/views/tech-list/techList.css";
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+.container {
+	font-family: Montserrat, Helvetica;
+	padding: 0 25vw 0 25vw;
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		padding: 0 10vw 0 10vw;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		padding: 0 10vw 0 10vw;
+	}
+}
+
+.text-green {
+	color: var(--green);
+}
+
+.text-blue {
+	color: var(--blue);
+}
+
+.text-white {
+	color: white;
+}
+
+/* ANIMATIONS */
+
+main.ng-enter {
+	transition: 0.5s linear all;
+	opacity: 0;
+}
+
+main.ng-enter.ng-enter-active {
+	opacity: 1;
 }
