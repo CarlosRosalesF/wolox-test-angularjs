@@ -7,18 +7,23 @@
           <li>
               <a href="/">Inicio</a>
           </li>
+          <li>
+            <button type="button" class="logout-button" ng-click="logout()">
+              <b>Logout</b>
+            </button>
+          </li>
       </ul>
   </nav>
 </header>
 
 <input type="text" ng-model="search" placeholder="Buscar"/>
-<button ng-click="tech = '-tech'" ng-show="tech === 'tech'">
-  <i class="fas fa-arrow-down"></i>
+<button class="sort-button" ng-click="tech = '-tech'" ng-show="tech === 'tech'">
+  Ordenar <i class="fas fa-arrow-down"></i>
 </button>
-<button ng-click="tech = 'tech'" ng-show="tech === '-tech'">
-  <i class="fas fa-arrow-up"></i>
+<button class="sort-button" ng-click="tech = 'tech'" ng-show="tech === '-tech'">
+  Ordenar <i class="fas fa-arrow-up"></i>
 </button>
-<select ng-model="type">
+<select class="select-button" ng-model="type">
   <option value="">Todas</option>
   <option value="Back-End">Back-End</option>
   <option value="Front-End">Front-End</option>
