@@ -1,27 +1,24 @@
 ﻿<!DOCTYPE html>
 <html ng-app="app">
   <head>
+    <base href="/" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Wolox Angular.js test</title>
-
     <link
       type="text/css"
       rel="stylesheet"
       href="../../../assets/css/styles.css"
     />
-
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <meta charset="utf-8" />
   </head>
 
-  <body ng-controller="mainCtrl">
-    <a href="#!login">Login</a>
+  <body ng-controller="mainCtrl" class="container">
 
-    <a href="#!techs">Tecnologias</a>
-
-    <div ng-view></div>
+    <main ng-view></main>
 
     <script
       type="text/javascript"
@@ -30,6 +27,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.0/angular-animate.js"
+    ></script>
+    <script src="https://kit.fontawesome.com/e7e2a413cc.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="app/views/app.js"></script>
     <script type="text/javascript" src="app/views/service.js"></script>
@@ -41,7 +42,11 @@
     ></script>
     <script
       type="text/javascript"
-      src="app/views/tech-list/techListView.js"
+      src="app/views/tech-list/techListController.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="app/views/landing/landingController.js"
     ></script>
   </body>
 </html>
