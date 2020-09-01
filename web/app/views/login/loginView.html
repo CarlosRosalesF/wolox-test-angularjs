@@ -1,48 +1,54 @@
-﻿<div class="container">
-  <form name="loginForm" novalidate>
-    <div>
-      <label for="email">Correo</label>
-      <input
-        type="email"
-        placeholder="Ingresa tu correo"
-        name="email"
-        ng-model="user.email"
-        ng-required="true"
-      />
-      <div
-        ng-show="loginForm.email.$touched && loginForm.email.$invalid"
-        style="padding-bottom: 10px"
-      >
-        <span class="error-message"> Ingresa un correo valido. </span>
-      </div>
+﻿<header class="main-header">
+  <h1 class="mh-logo">
+      <img src="../../../assets/img/logo_full_color.svg" width="150">
+  </h1>
+  <nav class="main-nav">
+      <ul class="main-nav-list">
+          <li>
+              <a href="/">Inicio</a>
+          </li>
+      </ul>
+  </nav>
+</header>
 
-      <label for="psw">Contraseña</label>
-      <input
-        type="password"
-        placeholder="Ingresa tu contraseña"
-        name="psw"
-        ng-model="user.password"
-        ng-required="true"
-      />
-      <div
-        ng-show="loginForm.psw.$touched && loginForm.psw.$invalid"
-        style="padding-bottom: 10px"
-      >
-        <span class="error-message"> La contraseña es requerida. </span>
-      </div>
-
-      <button
-        type="submit"
-        class="login-button"
-        ng-disabled="loginForm.$invalid"
-        ng-click="onLogin()"
-      >
-        Iniciar sesión
-      </button>
-      <label>
-        <input type="checkbox" name="remember" ng-model="user.stayConnected" />
-        Mantenerse conectado
-      </label>
+<form name="loginForm" ng-submit="onLogin()" novalidate>
+  <div>
+    <label for="email">Correo</label>
+    <input
+      type="email"
+      placeholder="Ingresa tu correo"
+      name="email"
+      ng-model="user.email"
+      ng-required="true"
+    />
+    <div
+      ng-show="loginForm.email.$touched && loginForm.email.$invalid"
+      style="padding-bottom: 10px"
+    >
+      <span class="error-message"> Ingresa un correo valido. </span>
     </div>
-  </form>
-</div>
+
+    <label for="psw">Contraseña</label>
+    <input
+      type="password"
+      placeholder="Ingresa tu contraseña"
+      name="psw"
+      ng-model="user.password"
+      ng-required="true"
+    />
+    <div
+      ng-show="loginForm.psw.$touched && loginForm.psw.$invalid"
+      style="padding-bottom: 10px"
+    >
+      <span class="error-message"> La contraseña es requerida. </span>
+    </div>
+
+    <button type="submit" class="login-button-form" ng-disabled="loginForm.$invalid">
+      Iniciar sesión
+    </button>
+    <label>
+      <input type="checkbox" name="remember" ng-model="user.stayConnected" />
+      Mantenerse conectado
+    </label>
+  </div>
+</form>
