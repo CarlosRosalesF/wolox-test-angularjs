@@ -37,6 +37,30 @@
 	margin: 1vw 0 1vw 0;
 }
 
+.logout-button {
+	padding: 5px 50px;
+	color: var(--red);
+	background: white;
+	border-radius: 20px;
+	border: 1px var(--red) solid;
+	margin-bottom: 10px;
+}
+
+.sort-button {
+	padding: 5px 20px;
+	border-radius: 10px;
+	font-family: Montserrat, Helvetica;
+	color: white;
+	background: var(--blue);
+	border: 1px solid var(--blue);
+}
+
+.select-button {
+	padding: 5px 20px;
+	border-radius: 10px;
+	font-family: Montserrat, Helvetica;
+}
+
 @media screen and (max-width: 900px) {
 	.tech-card {
 		flex-direction: column;
