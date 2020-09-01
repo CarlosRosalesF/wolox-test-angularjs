@@ -1,1 +1,123 @@
-﻿<h1>Landing</h1>
+﻿<div id="start">
+    <header class="main-header">
+        <h1 class="mh-logo">
+            <img src="../../../assets/img/logo_full_color.svg" width="150">
+        </h1>
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <li>
+                    <a href="#welcome">Inicio</a>
+                </li>
+                <li>
+                    <a href="#tecnologies">Tecnologías</a>
+                </li>
+                <li>
+                    <a href="#benefits">Beneficios</a>
+                </li>
+                <li>
+                    <a href="#requirements">Requerimientos</a>
+                </li>
+                <li ng-show="authorization">
+                    <a href="" ng-click="toTechList()">Herramientas</a>
+                </li>
+                <li ng-show="!authorization">
+                    <button type="button" class="login-button" ng-click="toLogin()">
+                        <b>Login</b>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="welcome" class="row">
+        <div style="flex: 50%">
+            <span style="font-size: clamp(1.5em, 4vw, 2.3em);">
+                Bienvenido a tu <br>
+                <b>Entrevista Técnica</b> en <br>
+                <b style="color: var(--green)">Wolox</b>
+            </span>
+        </div>
+        <div style="flex: 50%;">
+            <img ng-src="../../../assets/img/Img Hero/Ic_ilustra_Hero.png" alt="">
+        </div>
+    </div>
+</div>
+<div id="tecnologies" class="row">
+    <div style="flex: 50%">
+        <span style="font-size: clamp(1.2em, 4vw, 1.8em)">Estamos buscando <br>
+        para incorporar gente <br>
+        increíble para estas <br>
+        tecnologías:</span>
+    </div>
+    <div style="flex: 50%">
+        <img ng-src="../../../assets/img/Ic_Tecnologys.svg" alt="">
+    </div>
+</div>
+<div id="follow">
+    <div id="follow-img">
+        <span style="font-size: clamp(1.5em, 4vw, 2.5em); margin-bottom: 20px;">
+            <b class="text-green">350 +</b> <b class="text-blue">Woloxers</b>
+        </span>
+        <span style="color: white; margin-bottom: 10px; font-size: 1em">
+            <i class="fab fa-twitter" style="font-size: 35px;"></i>  @Wolox
+        </span>
+        <button type="button" class="follow-button text-white" ng-click="redirectToTwitter()">
+            Siguenos
+        </button>
+    </div>
+    <div id="follow-text" style="text-align: center;">
+        <span style="font-size: clamp(1.2em, 4vw, 2em)">Trabajamos para <br>
+        <b style="color: var(--blue)">convertir</b> <b style="color: var(--green)">ideas</b> en <br>
+        productos</span>
+    </div>
+</div>
+<div style="text-align: center;">
+    <span style="font-size: clamp(1.2em, 4vw, 1.5em)">
+        Entre los beneficios que ofrecemos se encuentran  
+        <span style="color: var(--blue); padding-left: 5px;">;)</span> 
+    </span>
+</div>
+<div style="margin-top: 50px;" id="benefits">
+    <div ng-repeat="benefit in benefits" class="benefit">
+        <img ng-src="{{ benefit.path }}">
+        <h3 style="text-align: center;">
+            <pre>{{ benefit.description }}</pre>
+        </h3>
+    </div>
+</div>
+<div id="requirements">
+    <div id="requirements-title">
+        <span style="font-size: clamp(1.5em, 4vw, 1.8em);">
+            <b>Requimientos</b>
+        </span>
+    </div>
+    <div id="requirements-list">
+        <ul>
+            <li style="list-style-image: url('../../../assets/img/Ic_Bullet_1.svg');">
+                Estudiantes avanzados o recibidos de carreras del rubro
+                informático, sistema, o electrónicos.
+            </li>
+            <li style="list-style-image: url('../../../assets/img/Ic_Bullet_2.svg');">
+                Inglés intermedio/avanzado.
+            </li>
+            <li style="list-style-image: url('../../../assets/img/Ic_Bullet_3.svg');">
+                Conocimiento en metodologías ágiles (deseable).
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="footer" style="text-align: center;">
+    <span style="font-size: clamp(1.5em, 4vw, 2.3em); font-weight: bold;">
+        Gracias <span class="text-blue">por completar el ejercicio</span>
+    </span>
+    <br>
+    <span style="font-size: clamp(1.2em, 4vw, 1.5em); margin-top: 10px;">
+        <b>Te invitamos a ver mas información</b>
+    </span>
+    <br>
+    <button class="more-button" ng-click="redirectToWolox()">
+        Conocer más
+    </button>
+    <h4 style="text-align: center;">
+        W O L O X
+    </h4>
+</div>
