@@ -1,5 +1,7 @@
 # Wolox test angular.js
 
+Web aplication running at  http://localhost:9090/.
+
 ### Installation
 
 Requires [Node.js] v8+ to run.
