@@ -1,7 +1,8 @@
 ﻿angularApp.controller('techListController', [
 	'$scope',
 	'service',
-	function($scope, service) {
+	'$location',
+	function($scope, service, $location) {
 		$scope.loading = true;
 		$scope.tech = 'tech';
 		function getInfo() {
@@ -13,6 +14,7 @@
 		getInfo();
 		$scope.logout = function() {
 			localStorage.clear();
+			$location.path('/');
 		};
 	}
 ]);
