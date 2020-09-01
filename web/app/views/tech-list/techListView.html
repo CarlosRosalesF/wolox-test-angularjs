@@ -1,1 +1,56 @@
-﻿<h1>Tech list</h1>
+﻿<header class="main-header">
+  <h1 class="mh-logo">
+      <img src="../../../assets/img/logo_full_color.svg" width="150">
+  </h1>
+  <nav class="main-nav">
+      <ul class="main-nav-list">
+          <li>
+              <a href="/">Inicio</a>
+          </li>
+      </ul>
+  </nav>
+</header>
+
+<input type="text" ng-model="search" placeholder="Buscar"/>
+<button ng-click="tech = '-tech'" ng-show="tech === 'tech'">
+  <i class="fas fa-arrow-down"></i>
+</button>
+<button ng-click="tech = 'tech'" ng-show="tech === '-tech'">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<select ng-model="type">
+  <option value="">Todas</option>
+  <option value="Back-End">Back-End</option>
+  <option value="Front-End">Front-End</option>
+  <option value="Mobile">Mobile</option>
+</select>
+
+<h1 ng-show="loading" style="text-align: center; color: var(--green)">
+  <i class="fas fa-spinner fa-pulse"></i>
+</h1>
+
+<div
+  ng-repeat="tech in filtered = ( techList  | orderBy: tech | filter: search | filter: {type: type})"
+  class="tech-card"
+>
+  <div class="image-container">
+    <img ng-src="{{tech.logo}}" />
+  </div>
+  <div class="card-text">
+    <div>
+      <h2>Nombre: {{tech.tech}}</h2>
+      <h2>Autor: {{tech.author}}</h2>
+      <h2>Lenguaje: {{tech.language}}</h2>
+    </div>
+    <div>
+      <h2>Licencia: {{tech.license}}</h2>
+      <h2>Año: {{tech.year}}</h2>
+      <h2>Tecnología: {{tech.type}}</h2>
+    </div>
+  </div>
+</div>
+<div>
+  <h2 style="font-size: clamp(1em, 4vw, 1.4em);">
+    Elementos visibles: {{ filtered.length }}
+  </h2>
+</div>
